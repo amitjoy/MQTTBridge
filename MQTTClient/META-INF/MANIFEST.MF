@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MQTTClient
+Bundle-SymbolicName: MQTTClient
+Bundle-Version: 1.0.0
+Bundle-Activator: de.uni.magdeburg.mqttClientActivator.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: org.osgi.framework 
+Bundle-ClassPath: ., lib/org.eclipse.paho.client.mqttv3-1.1.1.jar
+

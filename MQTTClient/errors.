@@ -1,0 +1,79 @@
+Sample bundle starting
+!SESSION 2017-06-24 13:54:07.676 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -dev file:/home/demo/workspace/.metadata/.plugins/org.eclipse.pde.core/Run MQTT Client/dev.properties -os linux -ws gtk -arch x86_64 -consoleLog -console
+
+!ENTRY MQTTClient 4 0 2017-06-24 13:54:08.661
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in de.uni.magdeburg.mqttClientActivator.Activator.start() of bundle MQTTClient.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:795)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:724)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:932)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:309)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1600)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+Caused by: java.lang.IllegalArgumentException: ifatnode.et.uni-magedburg.de
+	at org.eclipse.paho.client.mqttv3.MqttConnectOptions.validateURI(MqttConnectOptions.java:517)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.<init>(MqttAsyncClient.java:378)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.<init>(MqttAsyncClient.java:270)
+	at org.eclipse.paho.client.mqttv3.MqttClient.<init>(MqttClient.java:228)
+	at org.eclipse.paho.client.mqttv3.MqttClient.<init>(MqttClient.java:139)
+	at de.uni.magdeburg.mqttClientActivator.Activator.start(Activator.java:18)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:774)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:767)
+	... 12 more
+Root exception:
+java.lang.IllegalArgumentException: ifatnode.et.uni-magedburg.de
+	at org.eclipse.paho.client.mqttv3.MqttConnectOptions.validateURI(MqttConnectOptions.java:517)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.<init>(MqttAsyncClient.java:378)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.<init>(MqttAsyncClient.java:270)
+	at org.eclipse.paho.client.mqttv3.MqttClient.<init>(MqttClient.java:228)
+	at org.eclipse.paho.client.mqttv3.MqttClient.<init>(MqttClient.java:139)
+	at de.uni.magdeburg.mqttClientActivator.Activator.start(Activator.java:18)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:774)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:767)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:724)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:932)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:309)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1600)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.osgi 4 0 2017-06-24 13:54:08.663
+!MESSAGE Bundle MQTTClient_1.0.0 [10] is not active.
+osgi> update 10
+osgi> lb
+START LEVEL 6
+   ID|State      |Level|Name
+    0|Active     |    0|OSGi System Bundle (3.11.3.v20170209-1843)
+    1|Active     |    4|Console plug-in (1.1.200.v20150929-1405)
+    2|Active     |    4|Apache Felix Gogo Shell (0.10.0.v201212101605)
+    3|Active     |    4|Apache Felix Gogo Command (0.10.0.v201209301215)
+    5|Active     |    4|Apache Felix Gogo Runtime (0.10.0.v201209301036)
+    6|Active     |    4|Servlet API Bundle (3.1.0.v201410161800)
+   10|Installed  |    4|MQTTClient (1.0.0)
+osgi> start 10
+Sample bundle starting
+gogo: BundleException: Exception in de.uni.magdeburg.mqttClientActivator.Activator.start() of bundle MQTTClient.
+osgi> 
